@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Wedding Of Miftah & Wika</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--cream:#F8F4EE;
+--beige:#E7D8C9;
+--gold:#C7A17A;
+--mocha:#8B7355;
+--dark:#4E4339;
+--white:#ffffff;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:var(--cream);
+color:var(--dark);
+overflow-x:hidden;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+section{
+padding:90px 20px;
+position:relative;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+}
+
+.title{
+font-family:'Cormorant Garamond',serif;
+font-size:3rem;
+font-weight:700;
+color:var(--mocha);
+margin-bottom:20px;
+}
+
+.subtitle{
+color:#6e6258;
+line-height:1.8;
+max-width:700px;
+margin:auto;
+}
+
+.btn{
+display:inline-block;
+padding:14px 32px;
+background:var(--gold);
+color:white;
+text-decoration:none;
+border-radius:40px;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+.fade-up{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.fade-up.show{
+opacity:1;
+transform:none;
+}
+
+/* OPENING */
+
+#opening{
+position:fixed;
+inset:0;
+z-index:9999;
+background:
+linear-gradient(
+rgba(0,0,0,.45),
+rgba(0,0,0,.45)
+),
+url('cover.jpg');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+}
+
+.opening-card{
+padding:40px;
+backdrop-filter:blur(8px);
+background:rgba(255,255,255,.1);
+border:1px solid rgba(255,255,255,.2);
+border-radius:30px;
+width:90%;
+max-width:500px;
+}
+
+.opening-card h1{
+font-family:'Cormorant Garamond',serif;
+font-size:4rem;
+margin-bottom:15px;
+}
+
+.opening-card p{
+margin-bottom:15px;
+}
+
+.guest-name{
+font-size:1.2rem;
+font-weight:600;
+margin-bottom:25px;
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+background:
+linear-gradient(
+rgba(0,0,0,.3),
+rgba(0,0,0,.3)
+),
+url('hero.jpg');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+}
+
+.hero-content h3{
+font-weight:300;
+letter-spacing:3px;
+}
+
+.hero-content h1{
+font-family:'Cormorant Garamond',serif;
+font-size:5rem;
+margin:15px 0;
+}
+
+.hero-content p{
+font-size:1.1rem;
+}
+
+/* FLOATING FLOWER */
+
+.flower{
+position:fixed;
+top:-100px;
+font-size:20px;
+animation:fall linear infinite;
+pointer-events:none;
+z-index:1;
+}
+
+@keyframes fall{
+
+0%{
+transform:translateY(-100px) rotate(0deg);
+opacity:1;
+}
+
+100%{
+transform:translateY(120vh) rotate(360deg);
+opacity:0;
+}
+
+}
+
+/* NAVIGATION */
+
+.bottom-nav{
+
+position:fixed;
+bottom:15px;
+left:50%;
+transform:translateX(-50%);
+background:white;
+padding:12px 24px;
+border-radius:50px;
+box-shadow:0 10px 25px rgba(0,0,0,.12);
+z-index:999;
+display:flex;
+gap:20px;
+
+}
+
+.bottom-nav a{
+text-decoration:none;
+color:var(--mocha);
+font-size:.9rem;
+font-weight:500;
+}
+
+/* QUOTE */
+
+.quote{
+background:var(--beige);
+text-align:center;
+}
+
+.quote-box{
+max-width:800px;
+margin:auto;
+}
+
+.quote-box h2{
+font-family:'Cormorant Garamond',serif;
+font-size:2.5rem;
+margin-bottom:20px;
+}
+
+.quote-box p{
+line-height:2;
+}
+
+#musicBtn{
+    position:fixed;
+    bottom:90px;
+    right:20px;
+    width:55px;
+    height:55px;
+    border:none;
+    border-radius:50%;
+    background:var(--gold);
+    color:white;
+    font-size:24px;
+    cursor:pointer;
+    z-index:9999;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="opening">
+
+<div class="opening-card">
+
+<p>The Wedding Of</p>
+
+<h1>Miftah & Wika</h1>
+
+<p>Kepada Yth.</p>
+
+<div class="guest-name" id="guestName">
+Tamu Undangan
+</div>
+
+<button class="btn" onclick="openInvitation()">
+💌 Buka Undangan
+</button>
+
+</div>
+</div>
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h3>THE WEDDING OF</h3>
+
+<h1>Miftah & Wika</h1>
+
+<p>10 Oktober 2026</p>
+
+</div>
+
+</section>
+
+<section class="quote fade-up">
+
+<div class="container">
+
+<div class="quote-box">
+
+<h2>QS. Ar-Rum : 21</h2>
+
+<p>
+
+"Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan hidup dari jenismu sendiri supaya kamu merasa tenteram kepadanya, dan dijadikan-Nya di antaramu rasa kasih dan sayang."
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+<!-- ========================= -->
+
+<!-- SECTION MEMPELAI -->
+
+<!-- ========================= -->
+
+<section id="couple" class="fade-up">
+
+<div class="container">
+
+<center>
+<h2 class="title">Mempelai</h2>
+
+<p class="subtitle">
+Dengan memohon rahmat dan ridha Allah SWT,
+kami bermaksud menyelenggarakan pernikahan putra-putri kami:
+</p>
+</center>
+
+<br><br>
+
+<div style="
+display:flex;
+flex-wrap:wrap;
+gap:40px;
+justify-content:center;
+align-items:center;
+">
+
+<div style="
+background:white;
+padding:30px;
+border-radius:25px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+max-width:350px;
+text-align:center;
+">
+
+<img src="bride.jpg"
+style="
+width:220px;
+height:220px;
+object-fit:cover;
+border-radius:50%;
+margin:auto;
+margin-bottom:20px;
+">
+
+<h2 style="
+font-family:'Cormorant Garamond',serif;
+font-size:2.5rem;
+">
+
+Wika Hermawati
+
+</h2>
+
+<p>
+Putri Kedua dari
+<br>
+Bapak Herman & Ibu Maryati
+</p>
+
+</div>
+
+<div style="
+font-size:3rem;
+font-family:'Cormorant Garamond',serif;
+color:var(--gold);
+">
+
+&
+
+</div>
+
+<div style="
+background:white;
+padding:30px;
+border-radius:25px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+max-width:350px;
+text-align:center;
+">
+
+<img src="groom.jpg"
+style="
+width:220px;
+height:220px;
+object-fit:cover;
+border-radius:50%;
+margin:auto;
+margin-bottom:20px;
+">
+
+<h2 style="
+font-family:'Cormorant Garamond',serif;
+font-size:2.5rem;
+">
+
+Miftahudin Baihaqi Rais
+
+</h2>
+
+<p>
+Putra Kedua dari
+<br>
+Bapak Mamad & Ibu Siti Kodariah
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+
+<!-- COUNTDOWN -->
+
+<!-- ========================= -->
+
+<section
+id="countdown"
+class="fade-up"
+style="
+background:var(--beige);
+text-align:center;
+">
+
+<div class="container">
+
+<h2 class="title">
+Save The Date
+</h2>
+
+<div id="countdownBox"
+style="
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+margin-top:40px;
+">
+
+<div class="time-box">
+<h1 id="days">00</h1>
+<p>Hari</p>
+</div>
+
+<div class="time-box">
+<h1 id="hours">00</h1>
+<p>Jam</p>
+</div>
+
+<div class="time-box">
+<h1 id="minutes">00</h1>
+<p>Menit</p>
+</div>
+
+<div class="time-box">
+<h1 id="seconds">00</h1>
+<p>Detik</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<style>
+
+.time-box{
+background:white;
+padding:25px;
+border-radius:20px;
+width:120px;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+.time-box h1{
+font-size:3rem;
+color:var(--gold);
+font-family:'Cormorant Garamond',serif;
+}
+
+</style>
+
+<!-- ========================= -->
+
+<!-- LOVE STORY -->
+
+<!-- ========================= -->
+
+<section id="story" class="fade-up">
+
+<div class="container">
+
+<center>
+
+<h2 class="title">
+Love Story
+</h2>
+
+<p class="subtitle">
+Perjalanan singkat kami hingga menuju hari bahagia.
+</p>
+
+</center>
+
+<br><br>
+
+<div style="
+max-width:800px;
+margin:auto;
+position:relative;
+">
+
+<div style="
+border-left:2px solid var(--gold);
+padding-left:30px;
+margin-bottom:40px;
+">
+
+<h3>2025 — Pertemuan</h3>
+
+<p>
+Kami pertama kali bertemu dan saling mengenal
+melalui sebuah pertemanan yang sederhana.
+</p>
+
+</div>
+
+<div style="
+border-left:2px solid var(--gold);
+padding-left:30px;
+margin-bottom:40px;
+">
+
+<h3>2026 — Komitmen</h3>
+
+<p>
+Hubungan kami berkembang dan semakin
+meyakinkan untuk melangkah lebih serius.
+</p>
+
+</div>
+
+<div style="
+border-left:2px solid var(--gold);
+padding-left:30px;
+">
+
+<h3>2026 — Menikah</h3>
+
+<p>
+Dengan restu keluarga dan izin Allah SWT,
+kami memutuskan untuk menyempurnakan
+ibadah melalui pernikahan.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+
+<!-- ACARA -->
+
+<!-- ========================= -->
+
+<section
+id="event"
+class="fade-up"
+style="
+background:var(--beige);
+">
+
+<div class="container">
+
+<center>
+
+<h2 class="title">
+Wedding Event
+</h2>
+
+</center>
+
+<br><br>
+
+<div style="
+display:flex;
+flex-wrap:wrap;
+gap:30px;
+justify-content:center;
+">
+
+<div style="
+background:white;
+padding:35px;
+border-radius:25px;
+width:350px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+text-align:center;
+">
+
+<h2 style="
+font-family:'Cormorant Garamond',serif;
+">
+
+Akad Nikah
+
+</h2>
+
+<br>
+
+<p>
+Sabtu,
+10 Oktober 2026
+</p>
+
+<p>
+08.00 WIB
+</p>
+
+<p>
+Rumah Mempelai Wanita
+</p>
+
+</div>
+
+<div style="
+background:white;
+padding:35px;
+border-radius:25px;
+width:350px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+text-align:center;
+">
+
+<h2 style="
+font-family:'Cormorant Garamond',serif;
+">
+
+Resepsi
+
+</h2>
+
+<br>
+
+<p>
+Sabtu,
+10 Oktober 2026
+</p>
+
+<p>
+11.00 WIB
+</p>
+
+<p>
+Rumah Mempelai Wanita
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+
+<!-- GOOGLE MAPS -->
+
+<!-- ========================= -->
+
+<section id="location" class="fade-up">
+
+<div class="container">
+
+<center>
+
+<h2 class="title">
+Lokasi Acara
+</h2>
+
+</center>
+
+<br>
+
+<div style="margin-top:15px;">
+   <a href="https://maps.google.com/?q=-7.29798605,107.9176314"
+target="_blank"
+class="btn">
+📍 Buka Google Maps
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+
+<!-- RSVP -->
+
+<!-- ========================= -->
+
+<section
+id="rsvp"
+class="fade-up"
+style="
+background:var(--beige);
+">
+
+<div class="container">
+
+<center>
+
+<h2 class="title">
+RSVP
+</h2>
+
+<p class="subtitle">
+Mohon konfirmasi kehadiran Anda.
+</p>
+
+</center>
+
+<br><br>
+
+<form id="rsvpForm">
+
+<input
+id="nama"
+type="text"
+placeholder="Nama Lengkap">
+
+<select id="kehadiran">
+<option value="">Konfirmasi Kehadiran</option>
+<option value="Hadir">Hadir</option>
+<option value="Tidak Hadir">Tidak Hadir</option>
+</select>
+
+<textarea
+id="ucapan"
+placeholder="Ucapan dan Doa"></textarea>
+
+<button
+type="button"
+onclick="kirimRSVP()">
+Kirim RSVP
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+
+<!-- WEDDING GIFT -->
+
+<!-- ========================= -->
+
+<section id="gift" class="fade-up">
+
+<div class="container">
+
+<center>
+
+<h2 class="title">
+Wedding Gift
+</h2>
+
+<p class="subtitle">
+Doa restu Anda merupakan hadiah terindah.
+Namun jika ingin berbagi kebahagiaan,
+dapat melalui rekening berikut:
+</p>
+
+</center>
+
+<br><br>
+
+<div style="
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:30px;
+">
+
+<div style="
+background:white;
+padding:30px;
+width:350px;
+border-radius:25px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+text-align:center;
+">
+
+<h3>BSI</h3>
+
+<br>
+
+<p id="rekening1">
+7179397107
+</p>
+
+<p>
+a.n Wika Hermawati
+</p>
+
+<br>
+
+<button
+class="btn"
+onclick="copyRekening('7179397107')">
+
+Salin Rekening
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+
+<!-- UCAPAN TAMU -->
+
+<!-- ========================= -->
+
+<section id="wish" class="fade-up">
+
+<div class="container">
+
+<center>
+
+<h2 class="title">
+Ucapan & Doa
+</h2>
+
+</center>
+
+<br>
+
+<div style="
+background:white;
+padding:30px;
+border-radius:25px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+max-width:800px;
+margin:auto;
+">
+
+<p>
+💌 Wifna:
+Semoga menjadi keluarga yang sakinah,
+mawaddah, warahmah.
+</p>
+
+<hr style="margin:20px 0;">
+
+<p>
+💌 Ahmad:
+Selamat menempuh hidup baru.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+
+<!-- FOOTER -->
+
+<!-- ========================= -->
+
+<footer
+style="
+background:#4E4339;
+color:white;
+padding:60px 20px;
+text-align:center;
+">
+
+<h2
+style="
+font-family:'Cormorant Garamond',serif;
+font-size:3rem;
+">
+
+Miftah & Wika
+
+</h2>
+
+<br>
+
+<p>
+Terima kasih atas doa dan restunya.
+</p>
+
+<br>
+
+<p>
+10 Oktober 2026
+</p>
+
+</footer>
+
+<!-- ========================= -->
+
+<!-- AUDIO -->
+
+<!-- ========================= -->
+
+<audio id="bgMusic" preload="auto" loop>
+    <source src="https://cdn.jsdelivr.net/gh/wikahw0123-crypto/undangan-pernikahan@main/Musikk.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicBtn" onclick="toggleMusic()">
+    🔇
+</button>
+
+<!-- ========================= -->
+
+<!-- BOTTOM NAV -->
+
+<!-- ========================= -->
+
+<div class="bottom-nav">
+
+<a href="#home">Home</a>
+
+<a href="#couple">Mempelai</a>
+
+<a href="#event">Acara</a>
+
+<a href="#rsvp">RSVP</a>
+
+</div>
+
+<!-- ========================= -->
+
+<!-- JAVASCRIPT -->
+
+<!-- ========================= -->
+
+<script>
+
+/* BUKA UNDANGAN */
+
+function openInvitation() {
+
+    document.getElementById("opening").style.display = "none";
+
+    const music = document.getElementById("bgMusic");
+    music.play();
+
+    document.getElementById("musicBtn").innerHTML = "🔊";
+}
+
+/* NAMA TAMU */
+
+const urlParams =
+new URLSearchParams(window.location.search);
+
+const guest =
+urlParams.get('to');
+
+if(guest){
+
+document.getElementById("guestName").innerHTML =
+guest;
+
+}
+
+/* COUNTDOWN */
+
+const targetDate =
+new Date("October 10, 2026 08:00:00").getTime();
+
+setInterval(function(){
+
+const now =
+new Date().getTime();
+
+const distance =
+targetDate - now;
+
+const days =
+Math.floor(distance/(1000*60*60*24));
+
+const hours =
+Math.floor((distance%(1000*60*60*24))
+/
+(1000*60*60));
+
+const minutes =
+Math.floor((distance%(1000*60*60))
+/
+(1000*60));
+
+const seconds =
+Math.floor((distance%(1000*60))
+/
+1000);
+
+document.getElementById("days").innerHTML = days;
+document.getElementById("hours").innerHTML = hours;
+document.getElementById("minutes").innerHTML = minutes;
+document.getElementById("seconds").innerHTML = seconds;
+
+},1000);
+
+/* COPY REKENING */
+
+function copyRekening(text){
+
+navigator.clipboard.writeText(text);
+
+alert("Nomor rekening berhasil disalin");
+
+}
+
+/* MUSIC */
+
+function toggleMusic(){
+
+    const music = document.getElementById("bgMusic");
+    const btn = document.getElementById("musicBtn");
+
+    if(music.paused){
+        music.play();
+        btn.innerHTML = "🔊";
+    }else{
+        music.pause();
+        btn.innerHTML = "🔇";
+    }
+}
+
+/* ANIMASI SCROLL */
+
+const observer =
+new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+});
+
+document
+.querySelectorAll(".fade-up")
+.forEach(el=>observer.observe(el));
+
+/* FLOWER EFFECT */
+
+function createFlower(){
+
+const flower =
+document.createElement("div");
+
+flower.classList.add("flower");
+
+flower.innerHTML = "🌸";
+
+flower.style.left =
+Math.random()*100 + "vw";
+
+flower.style.animationDuration =
+(Math.random()*5+5)+"s";
+
+document.body.appendChild(flower);
+
+setTimeout(()=>{
+
+flower.remove();
+
+},10000);
+
+}
+
+setInterval(createFlower,800);
+
+</script>
+
+<script>
+
+async function kirimRSVP() {
+
+const data = {
+nama: document.getElementById("nama").value,
+kehadiran: document.getElementById("kehadiran").value,
+ucapan: document.getElementById("ucapan").value
+};
+
+try {
+
+const response = await fetch(
+"https://script.google.com/macros/s/AKfycbxc7HHMuUE9Uzo1sS2TU3qNGHgljC_qDXmes7yiYcKEmtXKmOOx1do4inl-dP16Aw1URQ/exec",
+{
+method: "POST",
+headers: {
+"Content-Type": "application/json"
+},
+body: JSON.stringify(data)
+}
+);
+
+const result = await response.json();
+
+if(result.success){
+
+alert("Terima kasih ❤️ RSVP berhasil dikirim");
+
+document.getElementById("rsvpForm").reset();
+
+}
+
+}
+catch(error){
+
+console.error(error);
+
+alert("Gagal mengirim RSVP");
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
